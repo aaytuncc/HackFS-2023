@@ -46,3 +46,29 @@ sh test.sh
 \`\`\`
 
 During testing, you'll need to provide your Docker image name and the desired URL.
+
+
+
+For node.js version of code you can run as following:
+
+\`\`\`bash
+cd test-npm
+\`\`\`
+
+
+Initialize the npm project
+\`\`\`bash
+npm init
+\`\`\`
+
+Install required lib
+\`\`\`bash
+npm install child_process
+\`\`\`
+
+Start running
+\`\`\`bash
+node script.js
+\`\`\`
+
+
