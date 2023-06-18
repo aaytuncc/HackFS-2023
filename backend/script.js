@@ -120,7 +120,7 @@ async function runWhole() {
   }
 }
 
-cron.schedule('*/5 * * * *', runWhole, {
+cron.schedule('* * * * *', runWhole, {
   scheduled: true,
   timezone: "Europe/Berlin"
 });
