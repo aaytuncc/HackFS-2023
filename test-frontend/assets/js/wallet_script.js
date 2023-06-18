@@ -8,13 +8,15 @@ async function handleSubscribe(signer, userAccount) {
 
     await PushAPI.channels.subscribe({
       signer: _signer,
-      channelAddress: 'eip155:5:0xdd59D77D2B910D5A002938bE3291240959f3C70f',
+      channelAddress: 'eip155:5:0x850E31A514CC4da6A40fb28D0AE5cB854C8C2EbD',  // Channel address
       userAddress: `eip155:5:${userAccount}`,
       onSuccess: () => {
         console.log('opt in success');
+        alert("Successfully subscribed to the channel");
       },
       onError: (error) => {
         console.error('opt in error', error);
+        alert("Error subscribing to the channel");
       },
       env: 'staging'
     });
@@ -126,7 +128,6 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
 
-    console.log("selmmm");
     await handleSubscribe(signer, account);
   });
 
